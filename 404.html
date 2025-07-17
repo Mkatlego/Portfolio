@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Get the path from the URL and redirect to the React app
+      const path = window.location.pathname + window.location.search + window.location.hash;
+      window.location.href = "/Portfolio" + path;
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/Portfolio" />
+    </noscript>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/Portfolio">/Portfolio</a>...</p>
+  </body>
+</html>
