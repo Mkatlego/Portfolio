@@ -134,11 +134,12 @@ const Skills: React.FC = () => {
       icon: '⚛️',
       color: '#00b8ff',
       skills: [
-        { name: 'React / Next.js', level: 95 },
+        { name: 'React 19', level: 95 },
         { name: 'TypeScript', level: 90 },
-        { name: 'Styled Components', level: 88 },
-        { name: 'Tailwind CSS', level: 85 },
-        { name: 'Framer Motion', level: 82 },
+        { name: 'Next.js', level: 88 },
+        { name: 'Tailwind CSS', level: 92 },
+        { name: 'Shadcn/ui', level: 85 },
+        { name: 'Vite', level: 88 },
       ],
     },
     {
@@ -146,11 +147,11 @@ const Skills: React.FC = () => {
       icon: '🔧',
       color: '#9d00ff',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
+        { name: 'Node.js', level: 85 },
+        { name: 'Supabase', level: 90 },
         { name: 'PostgreSQL', level: 82 },
-        { name: 'GraphQL', level: 78 },
-        { name: 'REST APIs', level: 92 },
+        { name: 'REST APIs', level: 88 },
+        { name: 'Real-time Subscriptions', level: 85 },
       ],
     },
     {
@@ -159,10 +160,10 @@ const Skills: React.FC = () => {
       color: '#ff0069',
       skills: [
         { name: 'Git / GitHub', level: 95 },
-        { name: 'Docker', level: 75 },
+        { name: 'Vercel', level: 92 },
         { name: 'CI/CD', level: 80 },
-        { name: 'AWS', level: 70 },
-        { name: 'Vercel', level: 90 },
+        { name: 'Code Splitting', level: 88 },
+        { name: 'Performance Optimization', level: 85 },
       ],
     },
     {
@@ -171,10 +172,10 @@ const Skills: React.FC = () => {
       color: '#00b8ff',
       skills: [
         { name: 'UI/UX Design', level: 85 },
-        { name: 'Figma', level: 88 },
-        { name: 'Problem Solving', level: 95 },
-        { name: 'Communication', level: 90 },
-        { name: 'Team Collaboration', level: 92 },
+        { name: 'Figma', level: 80 },
+        { name: 'Accessibility (WCAG)', level: 90 },
+        { name: 'Responsive Design', level: 95 },
+        { name: 'Problem Solving', level: 92 },
       ],
     },
   ];

@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [state, handleSubmit] = useForm('YOUR_FORMSPREE_ID');
+  const [state, handleSubmit] = useForm('YOUR_FORMSPREE_ID'); // Replace with your actual Formspree form ID
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -232,7 +232,7 @@ const Contact: React.FC = () => {
         >
           <ContactCard variants={itemVariants}>
             <ContactCardIcon>📧</ContactCardIcon>
-            <ContactCardText>your.email@example.com</ContactCardText>
+            <ContactCardText>khupemooketsi@gmail.com</ContactCardText>
           </ContactCard>
           <ContactCard variants={itemVariants}>
             <ContactCardIcon>📍</ContactCardIcon>

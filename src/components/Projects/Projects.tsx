@@ -232,6 +232,13 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: 'Everything by Nyasha',
+      description: 'A modern React TypeScript application for wig booking and management with integrated payment verification system. Features online booking, admin dashboard, real-time updates, and WCAG-compliant accessibility.',
+      tech: ['React 19', 'TypeScript', 'Vite', 'Supabase', 'Tailwind CSS', 'Shadcn/ui'],
+      liveUrl: 'https://everything-by-nyasha.vercel.app',
+      githubUrl: 'https://github.com/Mkatlego',
+    },
+    {
       title: 'E-Commerce Platform',
       description: 'A full-featured e-commerce platform with real-time inventory management, secure payment processing, and an intuitive admin dashboard.',
       tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
@@ -256,13 +263,6 @@ const Projects: React.FC = () => {
       title: 'Weather Dashboard',
       description: 'A beautiful weather dashboard with location-based forecasts, interactive maps, and severe weather alerts.',
       tech: ['React', 'OpenWeather API', 'Chart.js', 'Leaflet'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/Mkatlego',
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics platform for tracking social media performance, engagement metrics, and audience insights.',
-      tech: ['Vue.js', 'D3.js', 'Node.js', 'MongoDB', 'GraphQL'],
       liveUrl: '#',
       githubUrl: 'https://github.com/Mkatlego',
     },

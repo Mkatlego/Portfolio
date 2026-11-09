@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi';
 
 const FooterContainer = styled.footer`
   background: ${props => props.theme.colors.background.secondary};
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               <FiGithub />
             </SocialLink>
             <SocialLink
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/mooketsi-katlego"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -121,17 +121,7 @@ const Footer: React.FC = () => {
               <FiLinkedin />
             </SocialLink>
             <SocialLink
-              href="https://twitter.com/yourhandle"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiTwitter />
-            </SocialLink>
-            <SocialLink
-              href="mailto:your.email@example.com"
+              href="mailto:khupemooketsi@gmail.com"
               aria-label="Email"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}

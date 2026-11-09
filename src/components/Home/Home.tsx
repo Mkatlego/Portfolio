@@ -257,7 +257,7 @@ const Home: React.FC = () => {
               <FiGithub />
             </SocialLink>
             <SocialLink
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/mooketsi-katlego"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
               <FiLinkedin />
             </SocialLink>
             <SocialLink
-              href="mailto:your.email@example.com"
+              href="mailto:khupemooketsi@gmail.com"
               aria-label="Email"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
