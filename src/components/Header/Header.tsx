@@ -30,7 +30,7 @@ const Nav = styled.nav<{ $scrolled: boolean }>`
   transition: all ${props => props.theme.transitions.normal};
 `;
 
-const Logo = styled(Link)`
+const Logo = styled(motion(Link))`
   font-size: ${props => props.theme.typography.fontSize['2xl']};
   font-weight: ${props => props.theme.typography.fontWeight.bold};
   background: ${props => props.theme.colors.gradient.primary};
@@ -79,7 +79,7 @@ const NavLinks = styled.ul<{ $isOpen: boolean }>`
   }
 `;
 
-const NavLink = styled(Link)<{ $active: boolean }>`
+const NavLink = styled(motion(Link))<{ $active: boolean }>`
   color: ${props => props.$active ? props.theme.colors.primary[500] : props.theme.colors.text.secondary};
   text-decoration: none;
   font-weight: ${props => props.theme.typography.fontWeight.medium};
@@ -164,21 +164,50 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => {
     if (path === '/Portfolio') return location.pathname === '/Portfolio' || location.pathname === '/';
-    return location.hash === path.split('#')[1];
+    const hash = path.split('#')[1];
+    return location.hash === `#${hash}`;
+  };
+
+  const handleNavClick = (path: string) => {
+    if (path.includes('#')) {
+      const element = document.getElementById(path.split('#')[1]);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsOpen(false);
   };
 
   return (
     <>
       <HeaderContainer>
         <Nav $scrolled={scrolled}>
-          <Logo to="/Portfolio">MK</Logo>
+          <Logo
+            to="/Portfolio"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            MKK
+          </Logo>
           <MenuButton onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? 'Close menu' : 'Open menu'} aria-expanded={isOpen}>
             {isOpen ? <FiX /> : <FiMenu />}
           </MenuButton>
           <NavLinks $isOpen={isOpen}>
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <li key={item.path}>
-                <NavLink to={item.path} $active={isActive(item.path)} onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to={item.path}
+                  $active={isActive(item.path)}
+                  onClick={() => handleNavClick(item.path)}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   {item.label}
                 </NavLink>
               </li>

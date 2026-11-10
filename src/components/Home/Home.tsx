@@ -35,6 +35,7 @@ const Name = styled(motion.h1)`
   background-clip: text;
   position: relative;
   display: inline-block;
+  cursor: default;
 
   &::before,
   &::after {
@@ -48,6 +49,7 @@ const Name = styled(motion.h1)`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    pointer-events: none;
   }
 
   &::before {
@@ -150,7 +152,6 @@ const CTAButton = styled(motion.a)`
   }
 
   &:hover {
-    transform: translateY(-2px);
     box-shadow: ${props => props.theme.shadows.glow};
   }
 `;
@@ -200,7 +201,13 @@ const Home: React.FC = () => {
       <HeroContent>
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <Greeting variants={itemVariants}>Hello, I'm</Greeting>
-          <Name variants={itemVariants} data-text="Mooketsi Katlego">
+          <Name
+            variants={itemVariants}
+            data-text="Mooketsi Katlego"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          >
             Mooketsi Katlego
           </Name>
           <Title variants={itemVariants}>
@@ -244,8 +251,9 @@ const Home: React.FC = () => {
           <motion.div variants={itemVariants}>
             <CTAButton
               href="#projects"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
               View My Work
               <FiArrowDown />
