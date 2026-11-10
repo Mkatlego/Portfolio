@@ -1,6 +1,6 @@
 {
-  "short_name": "Mkatlego",
-  "name": "Mooketsi Katlego Portfolio",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/Portfolio/",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0a0a0f",
-  "background_color": "#0a0a0f"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
