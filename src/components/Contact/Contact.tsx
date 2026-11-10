@@ -135,7 +135,7 @@ const SuccessMessage = styled(motion.div)`
   margin-bottom: ${props => props.theme.spacing.lg};
 `;
 
-const ContactInfo = styled.div`
+const ContactInfo = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr;
   gap: ${props => props.theme.spacing.lg};
@@ -167,7 +167,7 @@ const ContactCardText = styled.p`
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [state, handleSubmit] = useForm('YOUR_FORMSPREE_ID'); // Replace with your actual Formspree form ID
+  const [state, handleSubmit] = useForm('mjkrldyl');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -24,7 +24,7 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const AboutGrid = styled.div`
+const AboutGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr;
   gap: ${props => props.theme.spacing['2xl']};
