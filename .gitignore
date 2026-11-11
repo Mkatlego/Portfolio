@@ -8,6 +8,8 @@ node_modules
 
 # Production
 /build
+/static
+asset-manifest.json
 
 # Misc
 .DS_Store
@@ -29,3 +31,13 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+
+# Root-level files (should be in public/)
+404.html
+_redirects
+favicon.ico
+index.html
+logo192.png
+logo512.png
+manifest.json
+robots.txt
